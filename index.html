@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Office Hygeny</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #2E7D32;
+            color: white;
+            padding: 20px;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #2E7D32;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        .service img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+        footer {
+            margin-top: 20px;
+            background-color: #2E7D32;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Pure Office Hygeny Logo" width="200">
+        <h1>Pure Office Hygeny</h1>
+        <p>Sauberkeit, die man sieht – Hygiene, die man fühlt!</p>
+    </header>
+
+    <nav>
+        <a onclick="showSection('leistungen')">Leistungen</a>
+        <a onclick="showSection('ueber-uns')">Über uns</a>
+        <a onclick="showSection('kundenbewertungen')">Kundenbewertungen</a>
+        <a onclick="showSection('kontakt')">Kontakt</a>
+    </nav>
+
+    <div id="leistungen" class="container" style="display: block;">
+        <h2>Unsere Leistungen</h2>
+        <div class="service">
+            <img src="buerostuhl-reinigung.png" alt="Bürostuhl Reinigung">
+            <p><strong>Bürostuhl Reinigung:</strong> Gründliche Reinigung und Desinfektion für hygienische Arbeitsplätze.</p>
+        </div>
+        <div class="service">
+            <img src="schreibtisch-desinfektion.png" alt="Schreibtisch Reinigung">
+            <p><strong>Schreibtisch Desinfektion:</strong> Reinigung und Desinfektion von Arbeitsflächen.</p>
+        </div>
+    </div>
+
+    <div id="ueber-uns" class="container">
+        <h2>Über uns</h2>
+        <p>Wir sind Experten für Bürohygiene und sorgen für Sauberkeit und Desinfektion in Ihrem Arbeitsumfeld.</p>
+        <p>Unser Unternehmen wurde 2025 gegründet und steht für höchste Reinigungsstandards und professionelle Hygienelösungen.</p>
+        <p>Unser Ziel ist es, Arbeitsplätze hygienisch rein zu halten und ein angenehmes Umfeld für unsere Kunden zu schaffen.</p>
+    </div>
+
+    <div id="kundenbewertungen" class="container">
+        <h2>Kundenbewertungen</h2>
+        <p>Noch keine Bewertungen.</p>
+        <p><a href="#">Schreiben Sie uns Ihre Meinung!</a></p>
+    </div>
+
+    <div id="kontakt" class="container">
+        <h2>Kontakt</h2>
+        <p><strong>Telefon & WhatsApp:</strong> 0172 4140171</p>
+        <p><strong>E-Mail:</strong> <a href="mailto:pureofficehygeny@gmail.com">pureofficehygeny@gmail.com</a></p>
+        <p><strong>Verfügbarkeit:</strong> 24/7 über Telefon, WhatsApp und E-Mail</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Pure Office Hygeny | Kontakt: pureofficehygeny@gmail.com</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.container').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
